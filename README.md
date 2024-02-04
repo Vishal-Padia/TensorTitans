@@ -15,8 +15,8 @@ Before running the application, ensure you have Python installed on your system.
 
 1. Clone the repository
 ```shell
-git clone <repository-url>
-cd <repository-directory>
+git clone https://github.com/Vishal-Padia/TensorTitans.git
+cd TensorTitans
 ```
 2. Create a virtual environment
 ```shell
