@@ -5,6 +5,10 @@ from yt_scraper.video_to_audio import download_and_convert_mp4_to_mp3
 from pytube import YouTube
 import re
 
+
+torchaudio.USE_SOUNDFILE_LEGACY_INTERFACE = False
+torchaudio.set_audio_backend("soundfile")
+
 def normalize_title(title):
     # Replace | with a space and remove other non-alphanumeric characters except spaces and dashes
     normalized_title = re.sub(r'[^\w\s-]', '', title.replace('|', ' '))
@@ -82,6 +86,6 @@ def main(youtube_url):
 
     return transcript
 
-# if __name__ == "__main__":
-#     youtube_url = input("Enter YouTube URL: ")  # Keep this for direct script execution
-#     main(youtube_url)
+if __name__ == "__main__":
+    youtube_url = input("Enter YouTube URL: ")  # Keep this for direct script execution
+    main(youtube_url)

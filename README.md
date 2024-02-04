@@ -21,9 +21,3 @@ source env/bin/activate # Linux/Mac
 pip install -r requirements.txt
 ```
 
-4. Run FastAPI in sent_analysis
-
-```bash
-cd sent_analysis
-uvicorn main:app --reload
-```
